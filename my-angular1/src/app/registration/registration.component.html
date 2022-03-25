@@ -1,0 +1,33 @@
+<div class="mainregister">
+    <form [formGroup]="registrationForm" >
+         <h2>Registration</h2>
+         <div class="img" >
+             <img class="profile-thumb bannerImg" src="https://tinyurl.com/kdc5vlp" class="imgg">
+    </div>
+         <div class="upload">
+                <div class="upl oad-button"><img src="https://tinyurl.com/mrphx9r" class="penimg">
+                <input class="file-upload fill" type="file" > </div>
+         </div>
+            <div class="mainregister">
+                    <label>Full Name :</label><input type="text" id="name" class="float" formControlName="fullname" ><br><br>
+                    <label>Email  :</label><input type="text" id="email" class="float"  formControlName="email" ><br><br>
+                    <label>Passowrd :</label><input type="text" id="Passowrd" class="float"  formControlName="Passowrd" ><br><br>
+                    <label>Conform Passowrd :</label><input type="text" id="cnfm" class="float" formControlName="ConformPassowrd" ><br><br>
+                    <label>Date Of Birth :</label><input type="date" id="date" class="float"  formControlName="DateOfBirth" ><br><br>
+                    <label>Gender :</label><input type="radio" id="gender" id="male" name=[(ngModel)] name="gender">Male
+                    <input type="radio" class="gender"id="fmale" name=[(ngModel)] name="gender" >Female
+                    <input type="radio" class="gender" id="others" name=[(ngModel)]  name="gender">Others<br><br>
+                    <label>Phone number :</label><input type="text" id="phn" class="float"  formControlName="Phonenumber"><br><br>
+                        <div class="check">
+                            <input type="checkbox"> I accept terms and conditions
+                        </div><br><br>
+                        <div class="rege">
+                        </div><br>
+                        <div class="alreadyregistration">
+                            <p class="alredy"><a routerLink="/login">AlreadyRegister?</a> </p>
+                        </div>
+                        
+                    </div>
+                </form>
+                <button type="button" (click)="submit()"> Register</button>
+</div>

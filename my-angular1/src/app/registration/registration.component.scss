@@ -1,0 +1,50 @@
+.mainregister {
+    margin: 34px 64px 0px -18px;
+}
+
+label {
+    float: left;
+    font-style: bold;
+    font-size: 15px;
+    font-weight: 800;
+}
+input.float {
+    float: right;
+}
+button {
+    width: 180px;
+    height: 41px;
+    border-radius: 11px;
+}
+.rege{
+    text-align: center;
+}
+.check {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: -19px;
+}
+p.alredy {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+    .upload-button {
+        border-radius: 112px;
+        margin: -48px 0px 0px 113px;
+        /* width: 44px; */
+    }
+  img.penimg {
+        width: 25px;
+        background-color: white;
+        border-radius: 20px;
+    }
+.imgg {
+    width: 159px;
+    background-color: white;
+    border-radius: 203px;
+}
+input.file-upload.fill {
+    display: none !important;
+}

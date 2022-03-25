@@ -1,0 +1,17 @@
+<h1>Au </h1>
+<form [formGroup]="auForm">
+<div class="input">
+<label>Name:</label><input type="text" id="outer"formControlName="firstname" autocomplete="off">
+<label class="label">Last:</label><input type="text" id="outerdown" class="last"formControlName="laststname" autocomplete="off">
+</div>
+<div *ngFor="let ele of values; let i = index" class="input"> 
+  <label>Name:</label><input type="text" id="innerup" formControlName="firstnames" autocomplete="off">
+  <label  class="label">Last:</label> <input type="text" id="innertext" class="last" formControlName="laststnames"autocomplete="off">
+  <button (click)="removefeild(i)" class="remove">Remove</button>
+</div>
+
+<button (click)="addfeild()" class="add">ADD</button>
+<div class="submit">
+<button (click)="total()" type="button"class="submi">Submit</button>
+</div>
+</form>
