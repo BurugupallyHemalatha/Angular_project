@@ -1,1 +1,16 @@
 <h1>hello this is the about component </h1>
+
+<form [formGroup]="auForm">
+<div *ngFor="let value of auForm.get('arr').controls; let i = index"> 
+    <label>Name:</label><input type="text" id="outer"formControlName="firstname" autocomplete="off">
+    <label>Last:</label><input type="text" id="outer1"formControlName="lastname" autocomplete="off">
+    <!-- <button (click)="removevalue(i)">Remove</button> -->
+  </div>
+  <button (click)="addvalue()">ADD</button>
+  
+  <h2>Result</h2>
+  <div class="submit">
+    <button (click)="total()" type="button"class="submi">Submit</button>
+    </div>
+    </form>
+  

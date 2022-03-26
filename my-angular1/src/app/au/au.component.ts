@@ -9,18 +9,21 @@ import { FormBuilder, FormGroup,AbstractControl, FormArray } from '@angular/form
 export class AuComponent implements OnInit {
   name = '';
   values:any = [];
-  arrayss: any;
- 
+  arrayss: FormArray | undefined ;
+  
+
   ngOnInit() {
     this.auForm = this.formBuilder.group({
-      arrayss: this.formBuilder.array([this.createItem()])
+      values: this.formBuilder.array([this.createItem()])
     })
   }
 
   createItem() {
     return this.formBuilder.group({
       firstnames: [''],
-      laststnames: ['']
+       lastnames: [''],
+      // firstname:[],
+      // lastname:[],
     })
   }
   removefeild(i: number){
@@ -35,30 +38,30 @@ export class AuComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.auForm = this.formBuilder.group({
       // firstname:[],
-      // laststname:[],
-      // laststnames:[],
-      // firstnames:[],
+      // lastname:[],
+       lastnames:[],
+      firstnames:[],
       // firstnames: this.formBuilder.array([
       //   this.formBuilder.control(null)
       // ]),
-      // laststnames:this.formBuilder.array([
+      // lastnames:this.formBuilder.array([
       //   this.formBuilder.control(null)
       // ]),
       
-})
+ })
   }
 
   addfeild() {
-   this.arrayss=this.auForm.get('arrayss') as FormArray;
-   this.arrayss.push(this.createItem())
+   this.values=this.auForm.get('values') as FormArray;
+   this.values.push(this.createItem())
     
   }
   
-  // getfirstnameFormControls(): AbstractControl[] {
-  //   return (<FormArray> this.auForm.get('firstname')).controls
-  // }
+  getfirstnameFormControls():AbstractControl[] {
+    return (<FormArray> this.auForm.get('firstname')).controls
+  }
   total(){
-    console.log("hello:",this.auForm.value)
+    console.log("this is values:",this.auForm.value)
   }
 }
 
